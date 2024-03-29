@@ -1,3 +1,30 @@
+<style>
+    
+    .why-us .accordion-list p {
+     margin-bottom: 10px; 
+    padding-bottom: 10px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 10px 0 0 0 !important;
+}
+
+i.bx.bx-check-double {
+    font-size: 24px !important;
+    padding: 2px 6px 0 0 !important;
+    color: #caa459 !important;
+}
+i#checkDoubleAbout {
+    font-size: 24px;
+    position: unset !important;
+    
+}
+
+div#boss {
+    display: flex;
+    justify-content: center;
+}
+</style>
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,44 +67,36 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+            <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="logo">
-        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-      </div>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/inspire-logo.png" alt="" class="img-fluid"></a>
+                </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto active" href="about.html">About</a></li>
+                        <li><a class="nav-link scrollto" href="product.html">Product</a></li>
+<!--                        <li><a class="nav-link scrollto" href="service.html">Services</a></li>-->
+                        <li class="dropdown"><a href="#"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="index.html#faq">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li id="enquiryBtnHeader"><a href="contact.html" class="get-started-btn scrollto">Enquiry</a></li>
+                    </ul>
 
-    </div>
-  </header><!-- End Header -->
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+
+                </nav><!-- .navbar -->
+
+            </div>
+
+        </header><!-- End Header -->
 
   <main id="main">
 
@@ -153,27 +172,31 @@
                                     <li data-aos="fade-up" data-aos-delay="100">
                                         <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Mission <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                                            <p>
-                                                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                                            </p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Become one of GE's TOP 5 Young and Energetic teams</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Provide personalized service and professional advice to offer customers a one-stop financial solution</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Become the most attractive and influential opportunity for young partners to embark on entrepreneurship</p>
                                         </div>
                                     </li>
 
                                     <li data-aos="fade-up" data-aos-delay="200">
-                                        <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Vision <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                                            <p>
-                                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                            </p>
+                                           <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Achieve the leading position as Malaysia's top choice financial planning team</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Introduce financial planning into every household and become the most caring and trustworthy household manager for customers</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Serve as a platform for nurturing entrepreneurs, helping each partner carve out their own success, achieve their ideal career, and fulfill their sense of satisfaction and purpose</p>
                                         </div>
                                     </li>
 
                                     <li data-aos="fade-up" data-aos-delay="300">
-                                        <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Core Values <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                                            <p>
-                                                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                            </p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Entrepreneurial Spirit</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Courtesy</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Fairness</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Dedication</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Acknowledgment of Success</p>
+                                            <p><i class="bx bx-check-double" id="checkDoubleAbout"></i>Continuous Improvement</p>
+                                            
                                         </div>
                                     </li>
 
@@ -182,8 +205,7 @@
 
                         </div>
 
-                        <div class="col-lg-5 order-1 order-lg-2 align-items-stretch video-box" style='background-image: url("assets/img/why-us.jpg");' data-aos="zoom-in">
-                            <a href="https://www.youtube.com/watch?v=LIqQNG_q2us" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                        <div class="col-lg-5 order-1 order-lg-2 align-items-stretch video-box" style='background-image: url("assets/img/featured-1.png");' data-aos="zoom-in">
                         </div>
 
                     </div>
@@ -196,124 +218,280 @@
                 <div class="container">
 
                     <div class="section-title" data-aos="fade-up">
-                        <h2>Team</h2>
-                        <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
+                        <h2>Our Team</h2>
+                        <p></p>
                     </div>
 
-                    <div class="row">
+                    
+                    <div class="row" id="boss">
 
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                             <div class="member" data-aos="zoom-in">
                                 <div class="member-img">
-                                    <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/team/bethany.jpeg" class="img-fluid" alt="">
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        
                                         <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
                                     </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <p>Animi est delectus alias quam repellendus nihil nobis dolor. Est sapiente occaecati et dolore. Omnis aut ut nesciunt explicabo qui. Eius nam deleniti ut omnis</p>
+                                    <h4>Bethany Hoo Bay Yee</h4>
+                                    <span>Group Manager / Recruitment Head</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
 
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                             <div class="member" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="member-img">
-                                    <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/team/janiss.jpeg" class="img-fluid" alt="">
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
                                         <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
                                     </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <p>Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque</p>
+                                    <h4>Janiss Yong</h4>
+                                    <span>Sales Manager / Sales Head</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                             <div class="member" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="member-img">
-                                    <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/team/cindy.jpeg" class="img-fluid" alt="">
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
                                         <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
                                     </div>
                                 </div>
                                 <div class="member-info">
-                                    <h4>William Anderson</h4>
-                                    <span>CTO</span>
-                                    <p>Ut enim possimus nihil cupiditate beatae. Veniam facere quae non qui necessitatibus rerum eos vero. Maxime sit sunt quo dolor autem est qui quaerat</p>
+                                    <h4>Cindy Ong</h4>
+                                    <span>Sales Manager / Training Head</span>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/mici.jpeg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Mici Loh</h4>
+                                    <span>Marketing Head / Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/beth-dad.jpg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Daddy Hoo</h4>
+                                    <span>Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="member-img">
+                                    <img src="assets/img/team/kay.jpeg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Kay Loh</h4>
+                                    <span>Event & Promotion Head / Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/grace.jpeg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Grace Yap</h4>
+                                    <span>Administration Head / Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/janette.png" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Janette Lee</h4>
+                                    <span>Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/audrey.jpeg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Audrey Tan</h4>
+                                    <span>Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="member-img">
+                                    <img src="assets/img/team/kent.jpg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Kent</h4>
+                                    <span>Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/kris.png" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Kris Tan</h4>
+                                    <span>Insurance Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="member-img">
+                                    <img src="assets/img/team/cs.jpg" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Coming Soon..</h4>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                       
 
                     </div>
 
                 </div>
             </section><!-- End Team Section -->
-            
+         
+           
             
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="footer-top">
+            <div class="footer-top">
+                <div class="container">
+                   
+                    <div class="row">
 
-      <div class="container">
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h3>Inspire Consultancy<span></span></h3>
+                            <p>
+                                19-2, Plaza Danau 2, Jalan 109F,<br>
+                                Taman Danau Desa, 58100 Kuala Lumpur,<br>
+                                Wilayah Persekutuan Kuala Lumpur <br><br>
+                                <strong>Phone:</strong> 03-79716815<br>
+                                <strong>Email:</strong> inspireConsultancy@gmail.com<br>
+                            </p>
+                        </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <a href="#header" class="scrollto footer-logo"><img src="assets/img/hero-logo.png" alt=""></a>
-            <h3>Knight</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-          </div>
-        </div>
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="product.html">Products</a></li>
+<!--                                <li><i class="bx bx-chevron-right"></i> <a href="service.html">Service</a></li>                               -->
+                            </ul>
+                        </div>
 
-        <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
+                      
+                        
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Enquiry</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="careers.html">Careers</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="feedback.html">Feedback</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="index.html#faq">F.A.Q</a></li>
+                            </ul>
+                        </div>
 
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+                       
+                    </div>
+                </div>
+            </div>
 
-      </div>
-    </div>
+            <div class="container d-md-flex py-4">
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Knight</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-free-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Inspire Consultancy</span></strong>. All Rights Reserved
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

@@ -1,27 +1,15 @@
 <style>
 
-    .map iframe {
-        border: 0;
-        width: 100%;
-        height: 400px;
-    }
 
-    .contact .map {
-        margin-bottom: 40px;
-    }
-
-    .contact .map iframe {
-        border: 0;
-        width: 100%;
-        height: 400px;
-    }
-    
-    select#subject_select{
-          border-radius: 0;
+    select#jobType {
+        border-radius: 0;
         box-shadow: none;
         font-size: 14px;
         height: 44px;
     }
+    input#resume {
+    height: auto !important;
+}
 </style>
 
 <!DOCTYPE html>
@@ -74,7 +62,7 @@
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#hero">Home</a></li>
                         <li><a class="nav-link scrollto" href="about.html">About</a></li>
                         <li><a class="nav-link scrollto" href="product.html">Product</a></li>
 <!--                        <li><a class="nav-link scrollto" href="service.html">Services</a></li>-->
@@ -104,10 +92,10 @@
                 <div class="container">
 
                     <div class="d-flex justify-content-between align-items-center">
-                        <h2>Contact Us</h2>
+                        <h2>Careers</h2>
                         <ol>
                             <li><a href="index.html">Home</a></li>
-                            <li>Contact Us</li>
+                            <li>Careers</li>
                         </ol>
                     </div>
 
@@ -119,81 +107,45 @@
                 <div class="container">
 
                     <div class="section-title">
-                        <h2>Talk To Us</h2>
+                        <h2>Job Application</h2>
                         <p></p>
                     </div>
-                    <div class="map" data-aos="fade-right">
-                        <iframe src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=19-2, Inspire Consultancy_my, Plaza Danau 2, Jalan 109F, Taman Danau Desa, 58100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" allowfullscreen=""></iframe>
-                    </div><!-- End Google Maps -->
+
                     <div class="row">
 
-                        <div class="col-lg-4">
-                            <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
-                                <div class="address">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h4>Location:</h4>
-                                    <p>19-2, Plaza Danau 2, Jalan 109F,<br>
-                                        Taman Danau Desa, 58100 Kuala Lumpur,<br>
-                                        Wilayah Persekutuan Kuala Lumpur </p>
-                                </div>
 
-                                <div class="email">
-                                    <i class="bi bi-envelope"></i>
-                                    <h4>Email:</h4>
-                                    <p>inspireConsultancy@gmail.com</p>
-                                </div>
 
-                                <div class="phone">
-                                    <i class="bi bi-phone"></i>
-                                    <h4>Call:</h4>
-                                    <p>03-79716815</p>
-                                </div>
+                        <div class="col-lg-12 mt-5 mt-lg-0">
 
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-8 mt-5 mt-lg-0">
-
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
+                            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-right">
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                                     </div>
-                                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <div class="col-md-6 form-group">
                                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="contact" id="contact" placeholder="Contact" required>
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" name="subject" id="subject_select" onchange="toggleInput()" required>
-                                        <option value="" disabled selected hidden>Select or Type a Subject</option>
-                                        <optgroup label="Products">
-                                            <option value="LifeInsurance">Life Insurance</option>
-                                            <option value="HealthInsurance">Health Insurance</option>
-                                            <option value="HospitalSurgical Insurance">Hospital & Surgical Insurance</option>
-                                            <option value="PersonalAccidentInsurance">Personal Accident Insurance</option>
-                                            <option value="WealthAccumulation">Wealth Accumulation</option>
-                                            <option value="TravelInsurance">Travel Insurance</option>
-                                            <option value="MotorInsurance">Motor Insurance</option>
-                                            <option value="HomeInsurance">Home Insurance</option>
-                                        </optgroup>
-                                        <optgroup label="Services">
-                                            <option value="InsuranceConsultationAssessment">Insurance Consultation and Assessment</option>
-                                            <option value="PolicySelectionCustomization">Policy Selection and Customization</option>
-                                            <option value="ClaimsAssistanceAdvocacy">Claims Assistance and Advocacy</option>
-                                            <option value="OngoingSupportRelationshipManagement">Ongoing Support and Relationship Management</option>
-                                        </optgroup>
-                                        <option value="other">Other</option>
+                                <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <select class="form-control" name="jobType" id="jobType" required>
+                                        <option value="">Work Type</option>
+                                        <option value="FT">Full Time</option>
+                                        <option value="PT">Part Time</option>
+                                        <option value="INTERN">Internship</option>
                                     </select>
-                                   
-                                        <input type="text" class="form-control" name="subject" id="subject_input" placeholder="Enter Your Subject" style="display: none;">
-                                  
+                                </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Your Contact No" required>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <div class="form-label">Upload Your Resume / CV</div>
+                                    <input type="file" class="form-control" id="resume" name="resume">
                                 </div>
                                 <div class="my-3">
                                     <div class="loading">Loading</div>
@@ -213,7 +165,7 @@
         </main><!-- End #main -->
 
         <!-- ======= Footer ======= -->
-         <footer id="footer">
+        <footer id="footer">
 
             <div class="footer-top">
                 <div class="container">
@@ -282,18 +234,6 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-
-        <script>
-                                        function toggleInput() {
-                                            var select = document.getElementById("subject_select");
-                                            var input = document.getElementById("subject_input");
-                                            if (select.value === "other") {
-                                                input.style.display = "block";
-                                            } else {
-                                                input.style.display = "none";
-                                            }
-                                        }
-        </script>
 
     </body>
 

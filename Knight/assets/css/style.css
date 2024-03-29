@@ -1620,7 +1620,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  
   z-index: 1;
 }
 
@@ -1653,6 +1653,7 @@ section {
   font-size: 26px;
   line-height: 1;
   font-weight: 700;
+  text-align: left;
 }
 
 #footer .footer-top .footer-contact h3 span {
@@ -1664,6 +1665,7 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
+  text-align: left;
 }
 
 #footer .footer-top h4 {
@@ -1671,6 +1673,7 @@ section {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  text-align: left;
 }
 
 #footer .footer-top h4::after {
