@@ -59,7 +59,7 @@
     <body>
 
         <!-- ======= Header ======= -->
-       <header id="header" class="d-flex align-items-center">
+      <header id="header" class="d-flex align-items-center">
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
@@ -68,11 +68,11 @@
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="index.html">Home</a></li>
                         <li><a class="nav-link scrollto" href="about.html">About</a></li>
-                        <li><a class="nav-link scrollto" href="product.html">Product</a></li>
-<!--                        <li><a class="nav-link scrollto" href="service.html">Services</a></li>-->
-                        <li class="dropdown"><a href="#" class="nav-link scrollto active"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
+                        <li><a class="nav-link scrollto" href="index.html#services">Product</a></li>    
+                        <li><a class="nav-link scrollto" href="index.html#featured">Services</a></li>    
+                         <li class="dropdown"><a href="#"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="contact.html">Contact Us</a></li>
                                 <li><a href="careers.html">Careers</a></li>
@@ -85,11 +85,11 @@
 
                     <i class="bi bi-list mobile-nav-toggle"></i>
 
-                </nav><!-- .navbar -->
+                </nav>
 
             </div>
 
-        </header><!-- End Header -->
+       </header>
 
         <main id="main">
 
@@ -147,7 +147,7 @@
 
                         </div>
 
-                        <div class="col-lg-8 mt-5 mt-lg-0">
+                        <div class="col-lg-8 mt-5 mt-lg-0" id="contactForm">
 
                             <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
                                 <div class="row">
@@ -167,7 +167,7 @@
                                         <optgroup label="Products">
                                             <option value="LifeInsurance">Life Insurance</option>
                                             <option value="HealthInsurance">Health Insurance</option>
-                                            <option value="HospitalSurgical Insurance">Hospital & Surgical Insurance</option>
+                                            <option value="HospitalSurgicalInsurance">Hospital & Surgical Insurance</option>
                                             <option value="PersonalAccidentInsurance">Personal Accident Insurance</option>
                                             <option value="WealthAccumulation">Wealth Accumulation</option>
                                             <option value="TravelInsurance">Travel Insurance</option>
@@ -231,7 +231,7 @@
                                 <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="product.html">Products</a></li>
-<!--                                <li><i class="bx bx-chevron-right"></i> <a href="service.html">Service</a></li>                               -->
+                                <li><i class="bx bx-chevron-right"></i> <a href="index.html#featured">Service</a></li>                       
                             </ul>
                         </div>
 
@@ -288,6 +288,21 @@
                                             }
                                         }
         </script>
+        <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var selectedOption = urlParams.get('selected');
+
+            if (selectedOption) {
+                var selectElement = document.getElementById('subject_select');
+                var optionElement = selectElement.querySelector('option[value="' + selectedOption + '"]');
+                
+                if (optionElement) {
+                    optionElement.selected = true;
+                }
+            }
+        };
+    </script>
 
     </body>
 
