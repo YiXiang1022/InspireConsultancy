@@ -1043,7 +1043,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 60px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("../img/feedback-background.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1056,7 +1056,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .testimonials .quote-icon {
@@ -1065,11 +1065,11 @@ section {
 }
 
 .testimonials .quote-icon i {
-  color: #caa459;
-  font-size: 24px;
-  padding: 18px;
-  border-radius: 50px;
-  border: 2px solid #caa459;
+    color: #caa459;
+    font-size: 24px;
+    padding: 18px;
+    border-radius: 50px;
+    border: 2px solid #caa459;
 }
 
 .testimonials .testimonials-carousel,
@@ -1121,15 +1121,16 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #caa459;
+  background-color: #7cc576;
 }
-
+h2#customerFeedback {
+    color: #caa455;
+}
 @media (min-width: 992px) {
   .testimonials .testimonial-item p {
     width: 80%;
   }
 }
-
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -1439,7 +1440,6 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #eaf6e9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1948,6 +1948,7 @@ section#testimonials {
         font-size: 15px;
         font-weight: 600;
         color: #111111;
+            right: 0;
     }
 
     /* Style for the dropdown items */
@@ -1973,5 +1974,10 @@ section#testimonials {
     div#flexheader {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.swiper-wrapper{
+    height: auto !important;
 }
     

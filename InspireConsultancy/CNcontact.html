@@ -58,27 +58,25 @@
 
     <body>
 
-        <!-- ======= Header ======= -->
         <header id="header" class="d-flex align-items-center">
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo">
-                    <a href="index.html"><img src="assets/img/inspire-logo.png" alt="" class="img-fluid"></a>
+                    <a href="CNindex.html"><img src="assets/img/inspire-logo.png" alt="" class="img-fluid"></a>
                 </div>
                 <div id="flexheader">
                     <nav id="navbar" class="navbar">
                         <ul>
-                            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-                            <li><a class="nav-link scrollto" href="about.html">About</a></li>
-                            <li><a class="nav-link scrollto" href="index.html#services">Product</a></li>    
-                            <li><a class="nav-link scrollto" href="index.html#featured">Services</a></li>    
-                            <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>    
-                            <li class="dropdown"><a href=""><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
+                            <li><a class="nav-link scrollto" href="CNindex.html#home">主页</a></li>
+                            <li><a class="nav-link scrollto" href="CNabout.html">关于我们</a></li>
+                            <li><a class="nav-link scrollto" href="CNindex.html#services">产品</a></li>    
+                            <li><a class="nav-link scrollto" href="CNindex.html#featured">服务</a></li>    
+                            <li><a class="nav-link scrollto" href="CNgallery.html">相册</a></li>    
+                            <li class="dropdown"><a href=""><span>联系方式</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
-                                    <li><a href="l">Contact Us</a></li>
-                                    <li><a href="careers.html">Careers</a></li>
-
-                                    <li><a href="index.html#faq">FAQ</a></li>
+                                    <li><a href="">联系我们</a></li>
+                                    <li><a href="CNcareers.html">职业应聘</a></li>
+                                    <li><a href="CNindex.html#faq">常见问题</a></li>
                                 </ul>
                             </li>
 
@@ -87,19 +85,19 @@
                         <i class="bi bi-list mobile-nav-toggle"></i>
 
                     </nav>
-                    <a href="contact.html" class="get-started-btn scrollto">Enquiry</a>
+                    <a href="CNcontact.html" class="get-started-btn scrollto">询问</a>
 
 
                     <div class="dropdown">
                         <button class="dropbtn" onclick="toggleDropdown()"><i class="bi bi-globe-americas"></i></button>
-                        <div class="dropdown-content" id="myDropdown">
+                        <div class="dropdown-content">
                             <a href="index.html">English</a>                           
                             <a href="CNindex.html">中文</a>
                             <!-- Add more language options as needed -->
                         </div>
                         <!-- Bilingual icon -->
                         <i class="icon fas fa-language"></i>
-                    </div>                
+                    </div>
                 </div>
             </div>
 
@@ -112,10 +110,10 @@
                 <div class="container">
 
                     <div class="d-flex justify-content-between align-items-center">
-                        <h2>Contact Us</h2>
+                        <h2>联系我们</h2>
                         <ol>
-                            <li><a href="index.html">Home</a></li>
-                            <li>Contact Us</li>
+                            <li><a href="CNindex.html">主页</a></li>
+                            <li>联系我们</li>
                         </ol>
                     </div>
 
@@ -127,7 +125,7 @@
                 <div class="container">
 
                     <div class="section-title">
-                        <h2>Talk To Us</h2>
+                        <h2>与我们交流</h2>
                         <p></p>
                     </div>
                     <div class="map" data-aos="fade-right">
@@ -139,7 +137,7 @@
                             <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
                                 <div class="address">
                                     <i class="bi bi-geo-alt"></i>
-                                    <h4>Location:</h4>
+                                    <h4>地址:</h4>
                                     <p>19-2, Plaza Danau 2, Jalan 109F,<br>
                                         Taman Danau Desa, 58100 Kuala Lumpur,<br>
                                         Wilayah Persekutuan Kuala Lumpur </p>
@@ -147,13 +145,13 @@
 
                                 <div class="email">
                                     <i class="bi bi-envelope"></i>
-                                    <h4>Email:</h4>
+                                    <h4>电子邮件:</h4>
                                     <p>inspireConsultancy@gmail.com</p>
                                 </div>
 
                                 <div class="phone">
                                     <i class="bi bi-phone"></i>
-                                    <h4>Call:</h4>
+                                    <h4>联络号码:</h4>
                                     <p>03-79716815</p>
                                 </div>
 
@@ -166,45 +164,45 @@
                             <form role="form" class="php-email-form" onsubmit="prepareWhatsAppMessage(event)">
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="您的姓名" required>
                                     </div>
                                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="您的电子邮件" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="contact" id="contact" maxlength="12" placeholder="Contact" required>
+                                    <input type="text" class="form-control" name="contact" id="contact" maxlength="12" placeholder="您的联系号码" required>
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="subject" id="subject_select" onchange="toggleInput()" required>
-                                        <option value="" disabled selected hidden>Select or Type a Subject</option>
-                                        <optgroup label="Products">
-                                            <option value="LifeInsurance">Life Insurance</option>
-                                            <option value="HealthInsurance">Health Insurance</option>
-                                            <option value="HospitalSurgicalInsurance">Hospital & Surgical Insurance</option>
-                                            <option value="PersonalAccidentInsurance">Personal Accident Insurance</option>
-                                            <option value="WealthAccumulation">Wealth Accumulation</option>
-                                            <option value="TravelInsurance">Travel Insurance</option>
-                                            <option value="MotorInsurance">Motor Insurance</option>
-                                            <option value="HomeInsurance">Home Insurance</option>
+                                        <option value="" disabled selected hidden>选择或键入主题</option>
+                                        <optgroup label="产品">
+                                            <option value="人寿保险">人寿保险</option>
+                                            <option value="医疗保险">医疗保险</option>
+                                            <option value="住院和手术保险">住院和手术保险</option>
+                                            <option value="个人意外伤害保险">个人意外伤害保险</option>
+                                            <option value="财富积累">财富积累</option>
+                                            <option value="旅行保险">旅行保险</option>
+                                            <option value="汽车保险">汽车保险</option>
+                                            <option value="家居保险">家居保险</option>
                                         </optgroup>
-                                        <optgroup label="Services">
-                                            <option value="InsuranceConsultationAssessment">Insurance Consultation and Assessment</option>
-                                            <option value="PolicySelectionCustomization">Policy Selection and Customization</option>
-                                            <option value="ClaimsAssistanceAdvocacy">Claims Assistance and Advocacy</option>
-                                            <option value="OngoingSupportRelationshipManagement">Ongoing Support and Relationship Management</option>
+                                        <optgroup label="服务">
+                                            <option value="保险咨询和评估">保险咨询和评估</option>
+                                            <option value="政策选择和定制">政策选择和定制</option>
+                                            <option value="索赔援助和宣传">索赔援助和宣传</option>
+                                            <option value="持续支持和关系管理">持续支持和关系管理</option>
                                         </optgroup>
-                                        <option value="other">Other</option>
+                                        <option value="其他">其他</option>
                                     </select>
 
-                                    <input type="text" class="form-control" name="subject" id="subject_input" placeholder="Enter Your Subject" style="display: none;">
+                                    <input type="text" class="form-control" name="subject" id="subject_input" placeholder="输入您的主题" style="display: none;">
 
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="留言" required></textarea>
                                 </div>
 
-                                <div class="text-center"><button type="submit">Send Message</button></div>
+                                <div class="text-center"><button type="submit">发送信息</button></div>
                             </form>
 
                         </div>
@@ -230,19 +228,19 @@
                                 19-2, Plaza Danau 2, Jalan 109F,<br>
                                 Taman Danau Desa, 58100 Kuala Lumpur,<br>
                                 Wilayah Persekutuan Kuala Lumpur <br><br>
-                                <strong>Phone:</strong> 03-79716815<br>
-                                <strong>Email:</strong> inspireConsultancy@gmail.com<br>
+                                <strong>联络号码:</strong> 03-79716815<br>
+                                <strong>电子邮件:</strong> inspireConsultancy@gmail.com<br>
                             </p>
                         </div>
 
                         <div class="col-lg-2 col-md-6 footer-links">
-                            <h4>Useful Links</h4>
+                            <h4>实用链接</h4>
                             <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="product.html">Products</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="index.html#featured">Service</a></li> 
-                                <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>                               
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNindex.html">主页</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNabout.html">关于我们</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNindex.html#services">产品</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNindex.html#featured">服务</a></li>     
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNgallery.html">相册</a></li> 
 
                             </ul>
                         </div>
@@ -250,11 +248,11 @@
 
 
                         <div class="col-lg-3 col-md-6 footer-links">
-                            <h4>Contact Us</h4>
+                            <h4>联系我们</h4>
                             <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Enquiry</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="careers.html">Careers</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="index.html#faq">F.A.Q</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="">询问</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNcareers.html">职业应聘</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="CNindex.html#faq">常见问题</a></li>
                             </ul>
                         </div>
 
@@ -267,13 +265,14 @@
 
                 <div class="me-md-auto text-center text-md-start">
                     <div class="copyright">
-                        &copy; Copyright <strong><span>Inspire Consultancy</span></strong>. All Rights Reserved
+                        &copy;  版权 <strong><span>Inspire Consultancy</span></strong>. 保留所有权利
                     </div>
 
                 </div>
 
             </div>
         </footer><!-- End Footer -->
+
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -292,7 +291,7 @@
                                         function toggleInput() {
                                             var select = document.getElementById("subject_select");
                                             var input = document.getElementById("subject_input");
-                                            if (select.value === "other") {
+                                            if (select.value === "其他") {
                                                 input.style.display = "block";
                                             } else {
                                                 input.style.display = "none";
@@ -325,19 +324,18 @@
                 // Check if the dropdown or text input is used for subject
                 var subjectSelect = document.getElementById('subject_select');
                 var subjectInput = document.getElementById('subject_input');
-                if (subjectSelect.value === "other") {
+                if (subjectSelect.value === "其他") {
                     subject = subjectInput.value;
                 } else {
-                    subject = subjectSelect.options[subjectSelect.selectedIndex].innerText;
+                    subject = subjectSelect.value;
                 }
 
                 // Concatenate form values into a single message
-                var whatsappMessage = "Hi, my name is " + name + ". I have a question regarding " + subject + ". \nHere are my details:\n" +
-                        "Name: " + name + "\n" +
-                        "Email: " + email + "\n" +
-                        "Subject: " + subject + "\n" +
-                        "Message: " + message;
-
+                var whatsappMessage = "您好，我叫" + name + "。我有一个关于" + subject + "的问题。\n以下是我的详细信息：\n" +
+                        "姓名：" + name + "\n" +
+                        "邮箱：" + email + "\n" +
+                        "主题：" + subject + "\n" +
+                        "消息：" + message;
 
                 // Replace 'YOUR_WHATSAPP_NUMBER' with your Malaysian phone number
                 var malaysiaPhoneNumbers = [
@@ -368,13 +366,14 @@
                 }
             }
 
-            // Hide dropdown content when clicking outside of it
+        // Hide dropdown content when clicking outside of it
             document.addEventListener("click", function (event) {
                 var dropdownContent = document.getElementById("myDropdown");
                 if (!event.target.closest('.dropdown')) {
                     dropdownContent.style.display = "none";
                 }
             });</script>
+
     </body>
 
 </html>
