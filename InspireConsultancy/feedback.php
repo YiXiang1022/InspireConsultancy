@@ -1,15 +1,60 @@
+<?php
+session_start();
+include 'database_connection.php';
+date_default_timezone_set('Asia/Singapore');
+if (isset($_POST["submitForm"]) && $_POST["submitForm"] === "Send Message") {
+    // Process the form submission
+    $name = $_POST['name'];
+    $email= $_POST['email'];
+    $contact = $_POST['contact'];
+    $ENmessage = $_POST['ENmessage'];
+    $display = 'NO';
+    
+    $currentDateTime = date('Y-m-d H:i:s');
+    
+ 
+    // Insert the data into the database
+    $sql = "INSERT INTO feedback (dateTime ,name, email, contact, ENmessage, display) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("ssssss",$currentDateTime, $name, $email, $contact, $ENmessage, $display);
+
+    if ($stmt->execute()) {
+        // Display alert message using JavaScript upon successful insertion
+        echo '<script>alert("Feedback has been sent successfully");</script>';
+         echo "<script>window.location.href='feedback.php';</script>";
+          
+        exit(); // Exit to prevent further execution
+    } else {
+        // Display alert message using JavaScript upon encountering an error
+        echo '<script>alert("Failed to sent the feedback ");</script>';
+         echo "<script>window.location.href='feedback.php';</script>";
+            exit(); // Exit to prevent further execution
+    }
+
+    $stmt->close();
+    
+    $con->close();
+}
+?>
+
 <style>
+input.btn.btn-primary {
+    background: #caa459;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+input.btn.btn-primary:hover {
+    background: #dca95b;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
 
-
-    select#jobType {
-        border-radius: 0;
-        box-shadow: none;
-        font-size: 14px;
-        height: 44px;
-    }
-    input#resume {
-        height: auto !important;
-    }
 </style>
 
 <!DOCTYPE html>
@@ -46,7 +91,6 @@
 
     <body>
 
-        <!-- ======= Header ======= -->
          <header id="header" class="d-flex align-items-center">
             <div class="container d-flex align-items-center justify-content-between">
 
@@ -60,12 +104,11 @@
                             <li><a class="nav-link scrollto" href="about.html">About</a></li>
                             <li><a class="nav-link scrollto" href="index.html#services">Product</a></li>    
                             <li><a class="nav-link scrollto" href="index.html#featured">Services</a></li>    
-                            <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>    
+                            <li><a class="nav-link scrollto" href="">Gallery</a></li>    
                             <li class="dropdown"><a href=""><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                     <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="">Careers</a></li>
-
+                                    <li><a href="careers.html">Careers</a></li>
                                     <li><a href="index.html#faq">FAQ</a></li>
                                 </ul>
                             </li>
@@ -100,10 +143,10 @@
                 <div class="container">
 
                     <div class="d-flex justify-content-between align-items-center">
-                        <h2>Careers</h2>
+                        <h2>Feedback</h2>
                         <ol>
                             <li><a href="index.html">Home</a></li>
-                            <li>Careers</li>
+                            <li>Feedback</li>
                         </ol>
                     </div>
 
@@ -115,53 +158,48 @@
                 <div class="container">
 
                     <div class="section-title">
-                        <h2>Job Application</h2>
-                        <p></p>
+                        <h2>LEAVE YOUR FEEDBACK HERE</h2>
+                        <p>"Your feedback is invaluable in helping us provide better service. Thank you!"</p>
                     </div>
 
-                    <div class="row">
+                    <div class="row" data-aos="fade-right" data-aos-delay="100">
 
 
-
-                        <div class="col-lg-12 mt-5 mt-lg-0">
-
-                            <form role="form" class="php-email-form" data-aos="fade-right" onsubmit="prepareWhatsAppMessage(event)">
+                        <div class="col-lg-12">
+                             <form  method="post" role="form" class="php-email-form" action="feedback.php">
+                            
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col form-group">
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                                     </div>
-                                    <div class="col-md-6 form-group">
+                                    <div class="col form-group">
                                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <select class="form-control" name="workType" id="workType" required>
-                                            <option value="">Work Type</option>
-                                            <option value="Full Time">Full Time</option>
-                                            <option value="Part Time">Part Time</option>
-                                            <option value="INTERN">Internship</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Your Contact No" required>
-                                    </div>
-                                </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
+                                    <input type="text" class="form-control" name="contact" id="contact" placeholder="Contact" required>
+
                                 </div>
-                                <br>
-                                <!--                                <div class="form-group">
-                                                                    <div class="form-label">Upload Your Resume / CV</div>
-                                                                    <input type="file" class="form-control" id="resume" name="resume">
-                                                                </div>-->
-
-                                <div class="text-center"><button type="submit">Send Message</button></div>
+                               
+                                <div class="form-group">
+                                    <textarea class="form-control" name="ENmessage" maxlength="200" rows="5" placeholder="Feel Free To Leave Your Feedback Here ( 200 Character Limit )" required></textarea>
+                                </div>
+                                <div class="my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>
+                                <div class="text-center">  <input type="submit" name="submitForm" class="btn btn-primary" value="Send Message"/></div>
                             </form>
-
                         </div>
 
                     </div>
+
+                </div>
+
+
+
+
 
                 </div>
             </section><!-- End Contact Section -->
@@ -193,7 +231,7 @@
                                 <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="product.html">Products</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="service.html">Service</a></li>      
+                                <li><i class="bx bx-chevron-right"></i> <a href="index.html#featured">Service</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>                               
 
                             </ul>
@@ -206,6 +244,7 @@
                             <ul>
                                 <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Enquiry</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="careers.html">Careers</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="feedback.html">Feedback</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="index.html#faq">F.A.Q</a></li>
                             </ul>
                         </div>
@@ -239,61 +278,7 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-        <script>
-                                function prepareWhatsAppMessage(event) {
-                                    event.preventDefault(); // Prevent form submission
-                                    var name = document.getElementById('name').value;
-                                    var email = document.getElementById('email').value;
-                                    var workType = document.getElementById('workType').value;
-                                    var mobile = document.getElementById('mobile').value;
-                                    var message = document.getElementById('message').value;
 
-
-
-                                    // Concatenate form values into a single message
-                                    var whatsappMessage = "Hi, I am " + name + " and I am applying for a job.\n\n" +
-                                            "Name: " + name + "\n" +
-                                            "Email: " + email + "\n" +
-                                            "Mobile: " + mobile + "\n" +
-                                            "Work Type: " + workType + "\n" +
-                                            "Message: " + message;
-
-                                    // Replace 'YOUR_WHATSAPP_NUMBER' with your Malaysian phone number
-                                    var malaysiaPhoneNumbers = [
-                                        "60143919049", // Phone number 1
-                                        "60109301350", // Phone number 2
-                                        "60182139693", // Phone number 3
-                                        "60149133591"// Phone number 3
-
-                                                // Add more phone numbers as needed
-                                    ];
-
-                                    var randomIndex = Math.floor(Math.random() * malaysiaPhoneNumbers.length);
-                                    var malaysiaPhoneNumber = malaysiaPhoneNumbers[randomIndex];
-
-                                    window.open("https://api.whatsapp.com/send?phone=" + malaysiaPhoneNumber + "&text=" + encodeURIComponent(whatsappMessage), "_blank");
-
-                                    // Redirect user to WhatsApp with pre-filled message
-                                    //                window.location.href = "https://api.whatsapp.com/send?phone=" + malaysiaPhoneNumber + "&text=" + encodeURIComponent(whatsappMessage);
-
-                                }
-        </script>
-        <script>function toggleDropdown() {
-                var dropdownContent = document.getElementById("myDropdown");
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            }
-
-// Hide dropdown content when clicking outside of it
-            document.addEventListener("click", function (event) {
-                var dropdownContent = document.getElementById("myDropdown");
-                if (!event.target.closest('.dropdown')) {
-                    dropdownContent.style.display = "none";
-                }
-            });</script>
     </body>
 
 </html>
